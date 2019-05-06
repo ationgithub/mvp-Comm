@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    >
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+            </RelativeLayout>
+
+    <com.company.project.widget.processbutton.iml.ActionProcessButton
+        android:id="@+id/bt_register_activity"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="220dp"
+        android:layout_marginEnd="61dp"
+        android:text="@string/register"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        custom:pb_colorComplete="@color/green_complete"
+        custom:pb_colorError="#f00"
+        custom:pb_colorNormal="@color/blue_normal"
+        custom:pb_colorPressed="@color/blue_pressed"
+        custom:pb_colorProgress="@color/purple_progress"
+        custom:pb_textComplete="@string/register_success"
+        custom:pb_textError="@string/register_fail"
+        custom:pb_textProgress="@string/registering"/>
+
+
+</RelativeLayout>

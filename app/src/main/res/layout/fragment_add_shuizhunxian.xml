@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_add_shuizhunxian_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="0.5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/lightest_gray">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="#2fa881" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/base_data"
+                    android:textColor="@color/material_yellow_800"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="编号：" />
+
+                <TextView
+                    android:id="@+id/tv_bianhao_add_shuizhunxian_fragment"
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="5dp" />
+            </TableRow>
+
+            <TableRow android:background="@color/material_cyan_50">
+
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="路线类型：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:padding="0.5dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_route_type_add_shuizhunxian_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ms_background_color="@color/material_cyan_50"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="观测类型：" />
+
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:padding="0.5dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_observe_type_add_shuizhunxian_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ms_background_color="@color/white"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow android:background="@color/material_cyan_50">
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="标段：" />
+
+
+                <TextView
+                    android:id="@+id/tv_biaoduan_add_shuizhunxian_fragment"
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="5dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="天气：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:padding="0.5dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_weather_add_shuizhunxian_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ms_background_color="@color/white"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow android:background="@color/material_cyan_50">
+
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="司镜人员：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:padding="0.5dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_staff_add_shuizhunxian_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ms_background_color="@color/material_cyan_50"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="气压(hPa)：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:background="@null">
+
+                    <EditText
+                        android:id="@+id/et_pressure_add_shuizhunxian_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow android:background="@color/material_cyan_50">
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="温度(℃)：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:background="@null">
+
+                    <EditText
+                        android:id="@+id/et_temperature_add_shuizhunxian_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberSigned"
+                        android:singleLine="true" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="观测日期：" />
+
+                <TextView
+                    android:id="@+id/tv_date_add_shuizhunxian_fragment"
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="5dp" />
+            </TableRow>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/lightest_gray">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="#2fa881" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/line_info"
+                    android:textColor="@color/material_yellow_800"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_jidian_addyusheshuizhunxian_fragment"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jidian" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/bt_cedian_addyusheshuizhunxian_fragment"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cedian" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="600dp" />
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

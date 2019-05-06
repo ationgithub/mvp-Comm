@@ -1,0 +1,93 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.LaunchTheme">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.Register" parent="AppTheme.Transparent">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.Transparent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="TextLabel" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorControlActivated">#FFCC00</item>
+    </style>
+
+    <!--版本更新模块-->
+    <style name="VersionTextTheme">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lines">2</item>
+    </style>
+
+    <style name="TickerTextAppearance">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <!--添加水准线模块-->
+    <style name="AddShuizhunxian">
+        <item name="android:background">@drawable/rect_bg_stroke_table</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+
+    </style>
+
+    <!--编辑水准线模块-->
+    <style name="EditShuizhunxian">
+        <item name="android:background">@drawable/rect_bg_stroke_table</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+
+    </style>
+
+    <!--测量模块-->
+    <style name="MeasureTable">
+        <item name="android:background">@drawable/rect_bg_stroke_table</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">35dp</item>
+
+    </style>
+
+    <!--上传模块-->
+    <style name="UplaodTheme">
+        <item name="android:textColor">@color/black_87_percent_alpha</item>
+        <item name="android:padding">0.5dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="CheckBoxTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+</resources>

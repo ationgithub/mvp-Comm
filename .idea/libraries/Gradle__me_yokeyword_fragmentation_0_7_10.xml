@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: me.yokeyword:fragmentation-0.7.10">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/f5ed4a31083adf3fed23835520e24fc96ab68a39/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/f5ed4a31083adf3fed23835520e24fc96ab68a39/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.yokeyword/fragmentation/0.7.10/74af0e5680093270cf77155ab291bb911a27662/fragmentation-0.7.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

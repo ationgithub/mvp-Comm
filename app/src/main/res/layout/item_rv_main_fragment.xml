@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_left_item_rv_main_fragment"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_delete_forever_black_48dp"
+        android:tint="@color/base_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_middle_item_rv_main_fragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name_item_rv_main_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="先期标"
+            android:textColor="@color/base_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_route_type_item_rv_main_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="路线类型：附合"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_observe_type_item_rv_main_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="观测类型：aBFFB"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_date_item_rv_main_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="观测日期：2016-10-25"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_right_item_rv_main_fragment"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:src="@drawable/ic_measure"
+        android:tint="@color/base_color" />
+</LinearLayout>

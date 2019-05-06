@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="headers">
+        <item>工点</item>
+        <item>测量</item>
+        <item>时间</item>
+    </string-array>
+
+    <string-array name="measure_status">
+        <item>全部</item>
+        <item>待测量</item>
+        <item>待平差</item>
+        <item>已删除</item>
+    </string-array>
+
+    <string-array name="time_type">
+        <item>全部</item>
+        <item>近一周</item>
+        <item>近一月</item>
+    </string-array>
+
+    <string-array name="route_type">
+        <item>闭合</item>
+        <item>附合</item>
+    </string-array>
+
+    <string-array name="observe_type">
+        <item>往:aBFFB 返:aFBBF</item>
+        <item>往:aBFFB 返:aBFFB</item>
+        <item>aBFFB</item>
+        <item>BBFF</item>
+    </string-array>
+
+    <string-array name="weather">
+        <item>晴</item>
+        <item>阴</item>
+        <item>雨</item>
+        <item>雪</item>
+        <item>风</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="upload_status">
+        <item>全部</item>
+        <item>待上传</item>
+        <item>已上传</item>
+    </string-array>
+
+
+    <string-array name="dig_method">
+        <item>全断面法</item>
+        <item>三台阶法</item>
+        <item>多台阶法</item>
+        <item>双侧壁导坑法</item>
+        <item>环形开挖法</item>
+        <item>中隔壁法</item>
+        <item>交叉中隔壁法</item>
+    </string-array>
+
+    <string-array name="dig_level">
+    <item>1级</item>
+    <item>2级</item>
+    <item>3级</item>
+    <item>4级</item>
+    <item>5级</item>
+    <item>6级</item>
+    <item>7级</item>
+    </string-array>
+</resources>

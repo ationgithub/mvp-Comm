@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+
+
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        applicationId "com.company.project"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 2
+        versionName "1.0.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+
+    //    compile 'com.android.design:MaterialDialog:1.0.2'
+
+    //    compile 'com.pgyersdk:sdk:3.0.4'
+
+    //日志打印
+    compile 'com.github.zhaokaiqiang.klog:library:1.5.0'
+
+    //表格
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
+
+    //viewPage  Tablayout
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+
+    //RecyclerView动画
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+
+    //友盟分析
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+    //扩展板的吐司
+    compile 'com.sdsmdg.tastytoast:tastytoast:0.0.1'
+
+    //图片加载
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //下拉刷新
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+
+    //底部导航栏
+    compile 'com.aurelhubert:ahbottomnavigation:1.2.2'
+    compile 'me.yokeyword:fragmentation:0.7.10'
+    compile 'me.yokeyword:fragmentation-swipeback:0.7.9'
+
+    //黄油刀系列
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //Rx系列
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+
+    //retrofit2系列
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.0-RC1'
+    compile 'com.google.code.gson:gson:2.6.2'
+
+    //圆形进度条
+    compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+
+    //筛选器
+    compile 'com.github.dongjunkun:DropDownMenu:1.0.3'
+
+    //数据库
+
+    //    compile 'org.litepal.android:core:1.3.2'
+    compile 'org.litepal.android:core:1.6.0'
+
+    //事件总线
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    //检测更新
+    compile 'com.qiangxi.checkupdatelibrary:checkupdatelibrary:1.0.3'
+
+    //spinner
+    compile 'com.jaredrummler:material-spinner:1.1.0'
+
+    //监测内存泄漏
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+
+    //监测卡顿
+    compile 'com.github.markzhai:blockcanary-android:1.3.1'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.7.8'
+    compile 'com.daimajia.numberprogressbar:library:1.2@aar'
+    compile 'com.robinhood.ticker:ticker:1.1.1'
+    compile 'com.afollestad.material-dialogs:core:0.9.1.0'
+
+    //recycleview实现viewpager
+    compile 'com.github.lsjwzh.RecyclerViewPager:lib:v1.1.2'
+    compile 'com.trycatch.android:mysnackbar:1.2.2'
+    compile files('libs/lite-common-1.1.3.jar')
+    compile files('libs/jxl.jar')
+    compile files('libs/pgyer_sdk_3.0.4.jar')
+}

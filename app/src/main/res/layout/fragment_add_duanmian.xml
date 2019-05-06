@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_add_duanmian_fragment"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+    >
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="0.5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/lightest_gray">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:background="#2fa881" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
+                android:text="@string/base_data"
+                android:textColor="@color/material_yellow_800"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <TableRow>
+
+            <TextView
+                style="@style/AddShuizhunxian"
+                android:layout_width="52dp"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:paddingRight="5dp"
+                android:text="断面里程DK："/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="2.5"
+                >
+                <EditText
+                    android:id="@+id/ed_dalicheng"
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="5dp"
+                    android:hint="大里程"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="15dp"
+                   android:layout_height="45dp"
+                    android:text="+"
+                    android:textSize="18sp"
+                    />
+                <EditText
+                    android:id="@+id/ed_xiaolicheng"
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="5dp"
+                    android:hint="小里程"
+                    />
+
+            </LinearLayout>
+
+        </TableRow>
+
+            <TableRow
+                android:background="@color/material_cyan_50"
+                >
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="断面宽度(米)：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:background="@null">
+
+                    <EditText
+                        android:id="@+id/et_duanmian_width"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="备注：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:background="@null">
+
+                    <EditText
+                        android:id="@+id/et_mark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/lightest_gray"
+                android:layout_marginTop="10dp"
+                >
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="#2fa881" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/base_method"
+                    android:textColor="@color/material_yellow_800"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableRow android:background="@color/material_cyan_50">
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="开挖方法：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:padding="0.5dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_method_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ms_background_color="@color/material_cyan_50"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow >
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="围岩级别：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:padding="0.5dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_level_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp" />
+                </FrameLayout>
+
+            </TableRow>
+
+
+
+
+
+            <TableRow
+                android:background="@color/material_cyan_50"
+                >
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="拱点下沉个数：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:background="@null">
+
+                    <EditText
+                        android:id="@+id/et_gdnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="水平收敛条数：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:background="@null">
+
+                    <EditText
+                        android:id="@+id/et_shuiping_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:background="@color/material_cyan_50">
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="斜收敛条数：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:background="@null">
+
+                    <EditText
+                        android:id="@+id/et_xie_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </FrameLayout>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="地表沉降个数：" />
+
+                <FrameLayout
+                    style="@style/AddShuizhunxian"
+                    android:layout_weight="2.5"
+                    android:background="@null">
+
+                    <EditText
+                        android:id="@+id/et_db_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </FrameLayout>
+
+            </TableRow>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/lightest_gray"
+                android:layout_marginTop="10dp"
+                >
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="#2fa881" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/change_value"
+                    android:textColor="@color/material_yellow_800"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+
+
+
+            <CheckBox
+                android:id="@+id/cb_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应力软岩或膨胀研"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_change"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="拱顶下沉"
+                    android:gravity="center"
+                    />
+
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#0000"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="拱顶累计变形极限值（毫米）"
+                    android:textSize="18sp"
+                    />
+
+
+
+                    <EditText
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/et_gd_change_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_bg_stroke_table"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:text="80"
+                        />
+
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="拱顶变形速率极限值（毫米/天）"
+                    android:textSize="18sp"
+                    />
+
+
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/et_gd_change_speed_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_bg_stroke_table"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="80"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="水平收敛"
+                    android:gravity="center"
+                    />
+
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#0000"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="水平线累计变形极限值（毫米）"
+                    android:textSize="18sp"
+                    />
+
+
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/et_line_change_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_bg_stroke_table"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="80"
+                    />
+
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="水平线收敛速率极限值（毫米/天）"
+                    android:textSize="18sp"
+                    />
+
+
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/et_line_change_speed_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_bg_stroke_table"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="80"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="斜收敛"
+                    android:gravity="center"
+                    />
+
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#0000"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="斜收敛线累计变形极限值（毫米）"
+                    android:textSize="18sp"
+                    />
+
+
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/et_xie_change_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_bg_stroke_table"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="80"
+                    />
+
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="斜收敛线收敛速率极限值（毫米/天）"
+                    android:textSize="18sp"
+                    />
+
+
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/et_xie_change_speed_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_bg_stroke_table"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="80"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="地表沉降"
+                    android:gravity="center"
+                    />
+
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#0000"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="地表累计变形极限值（毫米）"
+                    android:textSize="18sp"
+                    />
+
+
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/et_db_change_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_bg_stroke_table"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="80"
+                    />
+
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="地表变形速率极限值（毫米/天）"
+                    android:textSize="18sp"
+                    />
+
+
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/et_db_change_speed_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_bg_stroke_table"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="80"
+                    />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="34dp"
+                    android:text="确定"/>
+
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="59dp"
+                    android:text="取消"/>
+
+            </RelativeLayout>
+
+
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
