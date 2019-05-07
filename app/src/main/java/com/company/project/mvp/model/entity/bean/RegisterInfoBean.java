@@ -5,38 +5,76 @@ package com.company.project.mvp.model.entity.bean;
  * Email：langmanleguang@qq.com
  */
 public class RegisterInfoBean {
+    private String account;
+    private String userPwd;
+    private String OSType;
+    private String machineCode;
+    private String phoneBrand;
+    private String phoneSysVersion;
+    private String phoneModel;
+    private String auth_key;
 
-    /**
-     * quanxian :
-     * userFullName : 路基
-     * success : true
-     */
-
-    private String quanxian;
-    private String userFullName;
-    private boolean success;
-
-    public String getQuanxian() {
-        return quanxian;
+    public String getAuth_key() {
+        return auth_key;
     }
 
-    public void setQuanxian(String quanxian) {
-        this.quanxian = quanxian;
+    public void setAuth_key(String auth_key) {
+        this.auth_key = auth_key;
     }
 
-    public String getUserFullName() {
-        return userFullName;
+    public String getAccount() {
+        return account;
     }
 
-    public void setUserFullName(String userFullName) {
-        this.userFullName = userFullName;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
-    public boolean isSuccess() {
-        return success;
+    public String getUserPwd() {
+        return userPwd;
     }
 
-    public void setSuccess(boolean success) {
-        this.success = success;
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd;
+    }
+
+    public String getOSType() {
+        return OSType;
+    }
+
+    public void setOSType(String OSType) {
+        this.OSType = OSType;
+    }
+
+    public String getMachineCode() {
+        return machineCode;
+    }
+
+    public void setMachineCode(String machineCode) {
+        this.machineCode = machineCode;
+    }
+
+    public String getPhoneBrand() {
+        return phoneBrand;
+    }
+
+    public void setPhoneBrand(String phoneBrand) {
+        this.phoneBrand = phoneBrand;
+    }
+
+    public String getPhoneSysVersion() {
+        return phoneSysVersion;
+    }
+
+    public void setPhoneSysVersion(String phoneSysVersion) {
+        this.phoneSysVersion = phoneSysVersion;
+    }
+
+    public String getPhoneModel() {
+        return phoneModel;
+    }
+
+    public void setPhoneModel(String phoneModel) {
+        this.phoneModel = phoneModel;
     }
 }

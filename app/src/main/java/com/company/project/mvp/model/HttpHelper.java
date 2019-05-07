@@ -171,7 +171,8 @@ public class HttpHelper {
             mRetrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .client(mOkHttpClient)
-                    .addConverterFactory(GsonConverterFactory.create(gsonBuilder.create()))
+//                    .addConverterFactory(GsonConverterFactory.create(gsonBuilder.create()))
+                    .addConverterFactory(IGsonFactory2.create(gsonBuilder.create()))
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .build();
         }

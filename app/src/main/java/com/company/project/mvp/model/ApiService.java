@@ -12,6 +12,7 @@ import com.company.project.mvp.model.entity.bean.YusheshuizhunxianInfoBean;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -21,7 +22,9 @@ public interface ApiService {
 
     //登录验证
     @POST("app.do?appLogin")
-    Call<UserInfoBean> login(@Query("account") String account, @Query("userPwd") String userPwd, @Query("OSType") String OSType, @Query("machineCode") String machineCode, @Query("phoneBrand") String phoneBrand, @Query("phoneSysVersion") String phoneSysVersion, @Query("phoneModel") String phoneModel);
+//    Call<UserInfoBean> login(@Query("account") String account, @Query("userPwd") String userPwd, @Query("OSType") String OSType, @Query("machineCode") String machineCode, @Query("phoneBrand") String phoneBrand, @Query("phoneSysVersion") String phoneSysVersion, @Query("phoneModel") String phoneModel);
+//    Call<UserInfoBean> login(@Query("data") String data);    @Part() List<MultipartBody.Part> parts); 文件上传
+    Call<UserInfoBean> login(@Body String data);
 
     //更新检测
     @GET("app.do?checkUpdate")

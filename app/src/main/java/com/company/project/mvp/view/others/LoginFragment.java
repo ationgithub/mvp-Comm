@@ -195,8 +195,8 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
             btLogin.setProgress(50);
             //strMachineCode = DeviceUtils.getIMEI(getContext());
             setDeviceId();
-//            mPresenter.login(username, password,strMachineCode);
-            go2Main();
+            mPresenter.login(username, password,strMachineCode);
+//            go2Main();
 
         } else if (TextUtils.isEmpty(username)) {
             etUsername.setErrorEnabled(true);
