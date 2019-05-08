@@ -6,6 +6,7 @@ import com.company.project.mvp.model.entity.bean.DuanmianInfoBean;
 import com.company.project.mvp.model.entity.bean.GongdianInfoBean;
 import com.company.project.mvp.model.entity.bean.JidianBean;
 import com.company.project.mvp.model.entity.bean.RegisterBean;
+import com.company.project.mvp.model.entity.bean.RegisterInfoBean;
 import com.company.project.mvp.model.entity.bean.StaffBean;
 import com.company.project.mvp.model.entity.bean.UserInfoBean;
 import com.company.project.mvp.model.entity.bean.YusheshuizhunxianInfoBean;
@@ -21,10 +22,10 @@ import rx.Observable;
 public interface ApiService {
 
     //登录验证
-    @POST("app.do?appLogin")
+    @POST("postWithBody")
 //    Call<UserInfoBean> login(@Query("account") String account, @Query("userPwd") String userPwd, @Query("OSType") String OSType, @Query("machineCode") String machineCode, @Query("phoneBrand") String phoneBrand, @Query("phoneSysVersion") String phoneSysVersion, @Query("phoneModel") String phoneModel);
 //    Call<UserInfoBean> login(@Query("data") String data);    @Part() List<MultipartBody.Part> parts); 文件上传
-    Call<UserInfoBean> login(@Body String data);
+    Call<String> login(@Body String data);
 
     //更新检测
     @GET("app.do?checkUpdate")

@@ -16,7 +16,11 @@ import com.company.project.mvp.presenter.base.BasePresenter;
 import com.company.project.utils.AESCryptUtils;
 import com.company.project.utils.DeviceUtils;
 import com.company.project.utils.SharedPreferencesUtils;
+
+import java.io.IOException;
 import java.security.GeneralSecurityException;
+
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,6 +33,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
 
     private static final String TAG = LoginPresenter.class.getSimpleName();
     private UserInfoBean mUserInfoBean;
+    Gson mGson = new Gson();
 
     public LoginPresenter(LoginContract.View mView) {
         super(mView);
@@ -65,7 +70,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
         Log.e("signStr1",signStr1);
 
         String urlStr="";
-        Gson mGson = new Gson();
+
 //        try {
 //            Gson mGson = new Gson();
 //             urlStr = OtherCryptUtils.Encrypt(mGson.toJson(rib),"e10adc3949ba59ab","be56e057f20f883e");
@@ -75,28 +80,37 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
 //        }
 
 
-        HttpHelper.getInstance().initService().login(mGson.toJson(rib) ).enqueue(new Callback<UserInfoBean>() {
+        HttpHelper.getInstance().initService().login(mGson.toJson(rib) ).enqueue(new Callback<String>() {
             @Override
-            public void onResponse(Call<UserInfoBean> call, Response<UserInfoBean> response) {
-                Log.e("Callback",response.body().toString());
-                if (response.isSuccessful()) {
-                    if (response.body().getStatus() == 0) {
-                        BaseApplication.mUserInfoBean = mUserInfoBean = response.body();
-                        savaData(username, password);
+            public void onResponse(Call<String> call, Response<String> rib) {
+                if (rib.isSuccessful()) {
+                    Log.e("xaax","xaax"+rib.body());
+//                    try {
+//                        String logStr = response.body().string();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                    if (response.body().getStatus() == 0) {
+//                        BaseApplication.mUserInfoBean = mUserInfoBean = response.body();
+                               String xx = rib.body();
+                    RegisterInfoBean rib1 = mGson.fromJson(xx,RegisterInfoBean.class);
+                           Log.e("OSType",rib1.getOSType());
 
-                        getView().setSuccessMessage();
-                        //进入管理层界面
-                        getView().go2Main();
-                    } else {
-                        getView().setErrorMessage(response.body().getDescription());
-                    }
+//                        savaData(username, password);
+//
+//                        getView().setSuccessMessage();
+//                        //进入管理层界面
+//                        getView().go2Main();
+//                    } else {
+////                        getView().setErrorMessage(response.body().getDescription());
+//                    }
                 } else {
                     getView().setErrorMessage("服务器异常");
                 }
             }
 
             @Override
-            public void onFailure(Call<UserInfoBean> call, Throwable t) {
+            public void onFailure(Call<String> call, Throwable t) {
                 getView().showError(t);
             }
         });

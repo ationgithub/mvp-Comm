@@ -30,7 +30,7 @@ public class Constants {
 
     //基地址
 //    public static final String BASE_URL = "http://192.168.1.107:8080/ljcjqms/";
-    public static final String BASE_URL = "http://192.168.1.189:8081/ljcjqms/";
+    public static final String BASE_URL = "http://f5k6wp.natappfree.cc/";
 
     //登录地址
     public static final String LOGIN_URL = BASE_URL + "app.do?AppLogin&userName=%1&userPwd=%2&OSType=2";

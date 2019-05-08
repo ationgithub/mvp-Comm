@@ -77,4 +77,18 @@ public class RegisterInfoBean {
     public void setPhoneModel(String phoneModel) {
         this.phoneModel = phoneModel;
     }
+
+    @Override
+    public String toString() {
+        return "RegisterInfoBean{" +
+                "account='" + account + '\'' +
+                ", userPwd='" + userPwd + '\'' +
+                ", OSType='" + OSType + '\'' +
+                ", machineCode='" + machineCode + '\'' +
+                ", phoneBrand='" + phoneBrand + '\'' +
+                ", phoneSysVersion='" + phoneSysVersion + '\'' +
+                ", phoneModel='" + phoneModel + '\'' +
+                ", auth_key='" + auth_key + '\'' +
+                '}';
+    }
 }
