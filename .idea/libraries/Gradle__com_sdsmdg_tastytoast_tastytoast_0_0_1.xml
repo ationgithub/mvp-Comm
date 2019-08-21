@@ -1,12 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.sdsmdg.tastytoast:tastytoast-0.0.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/de610b1a6ac051112e4f533bf63974d6006e0286/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/de610b1a6ac051112e4f533bf63974d6006e0286/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/512dc3ae5b0cd3de5b1dcb11be45cd183e37c07d/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/512dc3ae5b0cd3de5b1dcb11be45cd183e37c07d/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sdsmdg.tastytoast/tastytoast/0.0.1/392680fb42306a144e165c90768b461bfeb88768/tastytoast-0.0.1-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

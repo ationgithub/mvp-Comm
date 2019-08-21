@@ -1,12 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: org.litepal.android:core-1.6.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/09af39dc9744f138b89a1a8ccfdd6719eb3ea809/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/09af39dc9744f138b89a1a8ccfdd6719eb3ea809/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/452b87a4469aecd9089c5bd392bc2f3c39c84f92/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/452b87a4469aecd9089c5bd392bc2f3c39c84f92/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.litepal.android/core/1.6.0/9ada619671be11ab2b0091d8158d4e64f1b35374/core-1.6.0-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
