@@ -7,16 +7,13 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.view.WindowManager;
-
 import com.company.project.mvp.contract.base.BaseContract;
 import com.company.project.common.ActivityManager;
 import com.company.project.utils.NetworkUtils;
-import com.socks.library.KLog;
 
 import me.yokeyword.fragmentation.SwipeBackLayout;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import me.yokeyword.fragmentation_swipeback.SwipeBackActivity;
-import com.company.project.common.ActivityManager;
 
 /**
  * Author：leguang on 2016/10/9 0009 15:49
@@ -52,7 +49,7 @@ public abstract class BaseActivity<P extends BaseContract.Presenter> extends Swi
         ActivityManager.getInstance().addActivity(this);
 
         //一旦启动某个Activity就打印Log，方便找到该类
-        KLog.e(getClass().getName());
+//        KLog.e(getClass().getName());
 
         //左侧滑动退出设置
         getSwipeBackLayout().setEdgeOrientation(SwipeBackLayout.EDGE_LEFT);

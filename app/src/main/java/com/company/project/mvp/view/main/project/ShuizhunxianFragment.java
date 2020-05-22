@@ -15,8 +15,7 @@ import com.company.project.mvp.view.base.BaseLazyFragment;
 import com.company.project.utils.DensityUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import com.company.project.mvp.view.base.BaseLazyFragment;
+
 
 /**
  * Author：leguang on 2016/10/9 0009 15:49
@@ -37,7 +36,7 @@ public class ShuizhunxianFragment extends BaseLazyFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_shuizhunxian, container, false);
-        ButterKnife.bind(this, view);
+
         initStateBar(toolbar);
         return view;
     }
@@ -63,8 +62,8 @@ public class ShuizhunxianFragment extends BaseLazyFragment {
     }
 
     private void initData() {
-        loadRootFragment(R.id.fl_menu_shuizhunxian_fragment, ShuizhunxianMenuFragment.newInstance());
-        replaceLoadRootFragment(R.id.fl_content_shuizhunxian_fragment, ShuizhunxianContentFragment.newInstance(), false);
+//        loadRootFragment(R.id.fl_menu_shuizhunxian_fragment, ShuizhunxianMenuFragment.newInstance());
+//        replaceLoadRootFragment(R.id.fl_content_shuizhunxian_fragment, ShuizhunxianContentFragment.newInstance(), false);
     }
 
     @NonNull

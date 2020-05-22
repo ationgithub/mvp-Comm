@@ -11,4 +11,6 @@
     <dimen name="corner_radius">2dp</dimen>
     <dimen name="layer_padding">3dp</dimen>
 
+    <dimen name="header_height">48dp</dimen>
+    <dimen name="header_padding">16dp</dimen>
 </resources>

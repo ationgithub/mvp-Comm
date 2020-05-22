@@ -12,7 +12,7 @@
 
         <include layout="@layout/toolbar" />
 
-        <com.yyydjk.library.DropDownMenu
+        <com.company.project.widget.dropdownmenu.DropDownMenu
             android:id="@+id/dropDownMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

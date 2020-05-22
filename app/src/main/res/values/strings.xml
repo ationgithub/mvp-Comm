@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">围岩观测</string>
+    <string name="app_name">mvp模板</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -93,4 +93,15 @@
     <string name="detail_data">详情数据</string>
     <string name="original_data">原始数据</string>
     <string name="result_data">成果数据</string>
+
+    <string name="cube_ptr_pull_down">Pull Down</string>
+    <string name="cube_ptr_pull_down_to_refresh">Pull Down to Refresh</string>
+    <string name="cube_ptr_release_to_refresh">Release To Refresh</string>
+    <string name="cube_ptr_refreshing">Updating...</string>
+    <string name="cube_ptr_refresh_complete">Updated.</string>
+
+    <string name="cube_ptr_last_update">last update:&#160;</string>
+    <string name="cube_ptr_seconds_ago">&#160;seconds ago</string>
+    <string name="cube_ptr_minutes_ago">&#160;minutes ago</string>
+    <string name="cube_ptr_hours_ago">&#160;hours ago</string>
 </resources>

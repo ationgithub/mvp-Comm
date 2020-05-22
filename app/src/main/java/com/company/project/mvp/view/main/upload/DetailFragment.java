@@ -11,7 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.company.project.BaseApplication;
 import com.company.project.R;
 import com.company.project.common.Constants;
@@ -19,15 +18,8 @@ import com.company.project.mvp.contract.base.BaseContract;
 import com.company.project.mvp.model.entity.db.ShuizhunxianData;
 import com.company.project.mvp.view.base.BaseFragment;
 import com.company.project.mvp.view.main.MainActivity;
-import com.company.project.mvp.view.main.measure.MeasureLeftFragment;
-import com.company.project.mvp.view.main.measure.MeasureRightFragment;
-
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import me.yokeyword.fragmentation.SupportFragment;
-import com.company.project.BaseApplication;
-import com.company.project.mvp.view.base.BaseFragment;
-import com.company.project.mvp.view.main.MainActivity;
 
 /**
  * Author：leguang on 2016/10/9 0009 15:49
@@ -69,7 +61,7 @@ public class DetailFragment extends BaseFragment {
         }
         //禁止Fragment侧滑退出
         setSwipeBackEnable(false);
-        ButterKnife.bind(this, view);
+//        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -78,7 +70,7 @@ public class DetailFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         if (savedInstanceState == null) {
             loadRootFragment(R.id.fl_left_detail_fragment, DetailLeftFragment.newInstance(mShuizhunxianData));
-            loadRootFragment(R.id.fl_right_detail_fragment, DetailRightFragment.newInstance(mShuizhunxianData));
+//            loadRootFragment(R.id.fl_right_detail_fragment, DetailRightFragment.newInstance(mShuizhunxianData));
         }
         initData();
     }

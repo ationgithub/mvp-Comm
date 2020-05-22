@@ -3,12 +3,93 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\9f3e236343c043843d8ce0834b6830bde16c3b94\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa61569ed84bc6979e529ec7d92bb4756b1c3572">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\classes_0d3a8a41eb105de8a015490eccf02129a67509e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.auto\auto-common\0.6\cf7212b0f8bfef12657b942df8f4f2cf032d3f41\auto-common-0.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cf7212b0f8bfef12657b942df8f4f2cf032d3f41">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\auto-common-0.6_25026c5daa3c99057fc5ab69478ce5bed4363fb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="H:\mvp-Comm\app\libs\lite-common-1.1.3.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="9e781f377a2f98796ba758a41c1e52403831b78d">
         <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\lite-common-1.1.3_26cf45d9b243b08546127023e8fcfd88f9b1b397.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-compiler\8.4.0\22f40cd3f01849c6deeab0a755d2082b2624581\butterknife-compiler-8.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="022f40cd3f01849c6deeab0a755d2082b2624581">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\butterknife-compiler-8.4.0_c9660a1b88bc0799fb0d37c5af8ff66a68ead23b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\18.0\cce0823396aa693798f8882e64213b1772032b09\guava-18.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\guava-18.0_2278082f4a55f060d3810693875cc9a317826ff9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\0cd10f95b9a88c1cb7eebc272685ba6fe6c9423a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9a24b1b000b211eabfa13b5834c059818bc98fd5">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\classes_77031861542773adba4aa557eefb070c180894c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\d10c6c0d5e4966256c488b87d7904238589f97f2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\classes_66365465ff4c7514f83cbe661d9d73d8b7f02618.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.auto.service\auto-service\1.0-rc2\51033a5b8fcf7039159e35b6878f106ccd5fb35f\auto-service-1.0-rc2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51033a5b8fcf7039159e35b6878f106ccd5fb35f">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\auto-service-1.0-rc2_5c3271ea07ecc16d19e38f32f604038ecb60d0e1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup\javapoet\1.7.0\4fdcf1fc27c1a8f55d1109df986c923152f07759\javapoet-1.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4fdcf1fc27c1a8f55d1109df986c923152f07759">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\javapoet-1.7.0_4d22ec76e2375b8b5c4031c7f5b9f96deae19a45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\092aefefe9778944dc0e8244bbd448822dff903a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="60182b96dcbd95dc33dd734bc81505d2b5ddc70e">
+        <dex dex="H:\mvp-Comm\app\build\intermediates\pre-dexed\debug\classes_4dfcca486ec3005926722a1699982b0e0574f453.jar" />
     </item>
 
 </items>

@@ -7,7 +7,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
 import com.company.project.BaseApplication;
 import com.company.project.R;
 import com.company.project.common.Constants;
@@ -16,16 +15,14 @@ import com.company.project.utils.DisplayUtils;
 import com.company.project.utils.NetworkUtils;
 import com.company.project.utils.ScreenUtils;
 import com.company.project.widget.PageStateLayout;
+import com.company.project.widget.pulltorefresh.PtrFrameLayout;
+import com.company.project.widget.pulltorefresh.PtrHandler;
+import com.company.project.widget.pulltorefresh.PtrUIHandler;
+import com.company.project.widget.pulltorefresh.header.StoreHouseHeader;
+import com.company.project.widget.pulltorefresh.indicator.PtrIndicator;
 
-import in.srain.cube.views.ptr.PtrFrameLayout;
-import in.srain.cube.views.ptr.PtrHandler;
-import in.srain.cube.views.ptr.PtrUIHandler;
-import in.srain.cube.views.ptr.header.StoreHouseHeader;
-import in.srain.cube.views.ptr.indicator.PtrIndicator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
-import com.company.project.BaseApplication;
-import com.company.project.widget.PageStateLayout;
 
 /**
  * Author：leguang on 2016/10/9 0009 15:49

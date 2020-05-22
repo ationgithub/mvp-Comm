@@ -19,7 +19,7 @@ public class ProjectActivity extends BaseActivity {
         setContentView(R.layout.activity_project);
 
         if (savedInstanceState == null) {
-            loadRootFragment(R.id.fl_project_activity, ProjectFragment.newInstance());
+//            loadRootFragment(R.id.fl_project_activity, ProjectFragment.newInstance());
         }
     }
 

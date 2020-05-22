@@ -28,25 +28,16 @@ import com.company.project.mvp.contract.LoginContract;
 import com.company.project.mvp.presenter.LoginPresenter;
 import com.company.project.mvp.view.base.BaseFragment;
 import com.company.project.mvp.view.main.MainActivity;
+import com.company.project.mvp.view.main.MainActivity1;
 import com.company.project.utils.DeviceUtils;
 import com.company.project.utils.KeyBoardUtils;
 import com.company.project.widget.processbutton.iml.ActionProcessButton;
-
 import org.json.JSONException;
-
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import com.company.project.BaseApplication;
-import com.company.project.mvp.view.base.BaseFragment;
-import com.company.project.mvp.view.main.MainActivity;
-import com.company.project.widget.processbutton.iml.ActionProcessButton;
 import retrofit2.adapter.rxjava.HttpException;
 
-import static com.company.project.BaseApplication.mContext;
 
 /**
  * Author：leguang on 2016/10/9 0009 15:49
@@ -55,18 +46,16 @@ import static com.company.project.BaseApplication.mContext;
 public class LoginFragment extends BaseFragment<LoginContract.Presenter> implements LoginContract.View {
 
     private static final String TAG = LoginFragment.class.getSimpleName();
-    @BindView(R.id.et_username_login_fragment)
-    TextInputLayout etUsername;
-    @BindView(R.id.et_password_login_fragment)
-    TextInputLayout etPassword;
-    @BindView(R.id.bt_login_fragment)
-    ActionProcessButton btLogin;
-    @BindView(R.id.cl_login_fragment)
-    CoordinatorLayout cl;
+
     private String username;
     private String password;
     private int fromTo;
     private String strMachineCode;
+
+    TextInputLayout etUsername;
+    TextInputLayout etPassword;
+    ActionProcessButton btLogin;
+    CoordinatorLayout cl;
 
     public static LoginFragment newInstance(int fromTo) {
         Bundle args = new Bundle();
@@ -123,8 +112,35 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
                     .commit();
         }
         View view = inflater.inflate(R.layout.fragment_login, container, false);
+         etUsername = (TextInputLayout) view.findViewById(R.id.et_username_login_fragment);
+         etPassword = (TextInputLayout) view.findViewById(R.id.et_password_login_fragment);
+         btLogin = (ActionProcessButton) view.findViewById(R.id.bt_login_fragment);
+         cl = (CoordinatorLayout) view.findViewById(R.id.cl_login_fragment);
 
-        ButterKnife.bind(this, view);
+        btLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                KeyBoardUtils.hideKeybord(btLogin, _mActivity);
+                username = etUsername.getEditText().getText().toString().trim();
+                password = etPassword.getEditText().getText().toString().trim();
+                if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
+                    btLogin.setProgress(50);
+                    //strMachineCode = DeviceUtils.getIMEI(getContext());
+                    setDeviceId();
+//            mPresenter.login(username, password,strMachineCode);
+                    go2Main();
+
+                } else if (TextUtils.isEmpty(username)) {
+                    etUsername.setErrorEnabled(true);
+                    etUsername.setError("");
+                    etUsername.setError("用户名不能为空");
+                } else if (TextUtils.isEmpty(password)) {
+                    etUsername.setErrorEnabled(true);
+                    etUsername.setError("");
+                    etPassword.setError("密码不能为空");
+                }
+            }
+        });
         return view;
     }
 
@@ -186,28 +202,7 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
         });
     }
 
-    @OnClick(R.id.bt_login_fragment)
-    public void onClick() {
-        KeyBoardUtils.hideKeybord(btLogin, _mActivity);
-        username = etUsername.getEditText().getText().toString().trim();
-        password = etPassword.getEditText().getText().toString().trim();
-        if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
-            btLogin.setProgress(50);
-            //strMachineCode = DeviceUtils.getIMEI(getContext());
-            setDeviceId();
-            mPresenter.login(username, password,strMachineCode);
-//            go2Main();
 
-        } else if (TextUtils.isEmpty(username)) {
-            etUsername.setErrorEnabled(true);
-            etUsername.setError("");
-            etUsername.setError("用户名不能为空");
-        } else if (TextUtils.isEmpty(password)) {
-            etUsername.setErrorEnabled(true);
-            etUsername.setError("");
-            etPassword.setError("密码不能为空");
-        }
-    }
 
     @Override
     public void setErrorMessage(String message) {
@@ -226,7 +221,7 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
         btLogin.postDelayed(new Runnable() {
             @Override
             public void run() {
-                _mActivity.startActivity(new Intent(_mActivity, MainActivity.class));
+                _mActivity.startActivity(new Intent(_mActivity, MainActivity1.class));
             }
         }, 300);
 

@@ -12,14 +12,12 @@ import com.company.project.mvp.model.entity.db.YusheshuizhunxianData;
 
 public interface MainContract {
     interface View extends BaseContract.View {
-        void responseGongdianData(List<GongdianData> mGongdianData);
-
-        void responseShuizhunxianData(List<YusheshuizhunxianData> mShuizhunxianData, int pagination);
+//        void responseGongdianData(List<GongdianData> mGongdianData);
+//        void responseShuizhunxianData(List<YusheshuizhunxianData> mShuizhunxianData, int pagination);
     }
 
     interface Presenter extends BaseContract.Presenter {
-        void requestGongdianData();
-
-        void requestShuizhunxianData(int pagination, String strGongdianParam, String strMeasureStatusParam, String strTimeTypeParam);
+//        void requestGongdianData();
+//        void requestShuizhunxianData(int pagination, String strGongdianParam, String strMeasureStatusParam, String strTimeTypeParam);
     }
 }
