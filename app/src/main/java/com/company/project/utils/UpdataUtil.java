@@ -26,61 +26,7 @@ import java.net.URL;
 public class UpdataUtil extends AppCompatActivity {
 
 
-    String baseUrl = "http://192.168.1.116:8080/jeecg/rest/";
-     int verCode, newCode;
-    private ProgressDialog pBar;
-
-    /** 检查更新 */
-    public void getUpdate() {
-        new Thread() {
-            @Override
-            public void run() {
-                StringBuffer result = getArray1(baseUrl+"/app-version/versionCode.xml");
-                Log.e("newCode", result.toString());
-                if (result.toString() != "") {
-                    newCode = parser1(result.toString());
-                    try {
-                        verCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
-                    } catch (PackageManager.NameNotFoundException e) {
-                        e.printStackTrace();
-                    }
-//                    if (newCode > verCode) {
-//                        doNewVersionUpdate();
-//                    }
-                }
-            }
-        }.start();
-    }
-
-    public StringBuffer getArray1(String portName) {
-        try {
-            java.net.URL url = new java.net.URL(portName);
-            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-            httpURLConnection.setChunkedStreamingMode(128 * 1024);// 128K
-            // 允许输入输出流
-            httpURLConnection.setDoInput(true);
-            httpURLConnection.setDoOutput(true);
-            httpURLConnection.setUseCaches(false);
-            httpURLConnection.setRequestMethod("POST");
-            httpURLConnection.setRequestProperty("charset", "UTF-8");
-            httpURLConnection.setRequestProperty("Content-Type", "text/html");
-//            DataOutputStream dos = new DataOutputStream(httpURLConnection.getOutputStream());
-
-            InputStreamReader reader = new InputStreamReader(httpURLConnection.getInputStream());
-            char[] c = new char[1024];
-            StringBuffer result = new StringBuffer();
-            int length = -1;
-            while ((length = reader.read(c)) != -1) {
-                result.append(c, 0, length);
-            }
-            reader.close();
-            return result;
-        } catch (Exception e) {
-            return new StringBuffer();
-        }
-    }
-
-    public static int parser1(String content) {
+    public static int parserCode(String content) {
         try {
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = factory.newPullParser();
@@ -105,64 +51,11 @@ public class UpdataUtil extends AppCompatActivity {
     }
 
 
-//    private FileOutputStream fos;
-//    private InputStream is;
-    private void doNewVersionUpdate() {
-        Dialog dialog = new AlertDialog.Builder(getApplicationContext()).setTitle("软件更新").setMessage("发现有新版本")
-                .setPositiveButton("立即更新", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        pBar = new ProgressDialog(getApplicationContext());
-                        pBar.setTitle("正在下载...");
-                        pBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                        pBar.setButton("取消", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //                                    fos.close();
-//                                    is.close();
-                                File file = new File(Environment.getExternalStorageDirectory(), "dyhMallAPP.apk");
-                                file.delete();
-                                dialog.dismiss();
-                            }
-                        });
-                        downFile();
-                    }
-                }).setNegativeButton("暂不更新", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        dialog.dismiss();
-                    }
-                }).create();
-        dialog.show();
-    }
-
-    public void downFile() {
-        final ProgressDialog pd; // 进度条对话框
-        pd = new ProgressDialog(this);
-        pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        pd.setMessage("正在下载");
-        pd.show();
-        new Thread() {
-            @Override
-            public void run() {
-                try {
-                    File file = getFileFromServer(baseUrl + "/update/dyhMallAPP.apk", pd);
-//					File file = new File(Environment.getExternalStorageDirectory(), "dyhMallAPP.apk");
-                    sleep(1000);
-                    installApk(file);
-                    pd.dismiss(); // 结束掉进度条对话框
-                } catch (Exception e) {
-                }
-            }
-        }.start();
-
-    }
 
     public static File getFileFromServer(String path, ProgressDialog pd) throws Exception {
         // 如果相等的话表示当前的sdcard挂载在手机上并且是可用的
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            java.net.URL url = new java.net.URL(path);
+            URL url = new URL(path);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setChunkedStreamingMode(128 * 1024);// 128K
             // 允许输入输出流
@@ -177,7 +70,7 @@ public class UpdataUtil extends AppCompatActivity {
             // pd.setMax(conn.getContentLength());
             pd.setMax(100);
             InputStream is = httpURLConnection.getInputStream();
-            File file = new File(Environment.getExternalStorageDirectory(), "app-release.apk");
+            File file = new File(Environment.getExternalStorageDirectory(), "app-wy.apk");
             if (file.exists()) {
                 file.createNewFile();
             }
@@ -205,15 +98,33 @@ public class UpdataUtil extends AppCompatActivity {
         }
     }
 
-    protected void installApk(File file) {
-        Intent intent = new Intent();
-        // 执行动作
-        intent.setAction(Intent.ACTION_VIEW);
-        // 执行的数据类型
-        intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-        finish();
+    public static StringBuffer getXml(String portName) {
+        try {
+            URL url = new URL(portName);
+            Log.e("newCode", url.toString());
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            httpURLConnection.setChunkedStreamingMode(128 * 1024);// 128K
+            // 允许输入输出流
+            httpURLConnection.setDoInput(true);
+            httpURLConnection.setDoOutput(true);
+            httpURLConnection.setUseCaches(false);
+            httpURLConnection.setRequestMethod("POST");
+            httpURLConnection.setRequestProperty("charset", "UTF-8");
+            httpURLConnection.setRequestProperty("Content-Type", "text/html");
+//            DataOutputStream dos = new DataOutputStream(httpURLConnection.getOutputStream());
+            InputStreamReader reader = new InputStreamReader(httpURLConnection.getInputStream());
+            char[] c = new char[1024];
+            StringBuffer result = new StringBuffer();
+            int length = -1;
+            while ((length = reader.read(c)) != -1) {
+                result.append(c, 0, length);
+            }
+            reader.close();
+            Log.e("newCode", result.toString());
+            return result;
+        } catch (Exception e) {
+            return new StringBuffer();
+        }
     }
 
 }

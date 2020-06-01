@@ -14,7 +14,7 @@ import android.util.Log;
 
 import com.company.project.common.ActivityManager;
 import com.company.project.mvp.view.others.LaunchActivity;
-import com.socks.library.KLog;
+
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -157,7 +157,6 @@ public class AppExceptionHandler implements Thread.UncaughtExceptionHandler {
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(intent);
                         ActivityManager.getInstance().appExit();
-                        KLog.e("重启");
                     }
                 })
                 .setPositiveButton("退出", new DialogInterface.OnClickListener() {
